@@ -14,11 +14,14 @@ app.use(express.json());
 
 const io = new Server(server, {
   cors: {
-    origin: ["http://localhost:5173", "http://localhost:5174"],
+    origin: [
+      "http://localhost:5173",
+      "http://localhost:5174",
+      "https://syncspace-watch-party.vercel.app"
+    ],
     methods: ["GET", "POST"],
   },
 });
-
 
 const rooms = new Map();
 const DEFAULT_VIDEO = "";

@@ -4,7 +4,7 @@ import YouTube from "react-youtube";
 import { io } from "socket.io-client";
 import "./App.css";
 
-const socket = io("http://localhost:3002", { autoConnect: false });
+const socket = io("https://syncspace-watch-party.onrender.com", { autoConnect: false });
 
 type Participant = {
   userId: string;
